@@ -1,0 +1,43 @@
+<div>
+  <p [ngStyle]="{color: 'rgb(38, 193, 38)'}">Fiesta Nacional</p>
+  <p [ngStyle]="{color: 'rgb(52, 64, 235)'}">Fiesta Regional</p>
+  <p [ngStyle]="{color: 'rgb(211, 70, 176)'}">Fiesta Local</p>
+  <p [ngStyle]="{color: 'rgb(255, 191, 0)'}">Fiesta Centro</p>
+</div>
+<div *ngFor="let mes of meses; index as i">
+  {{ nombres[i] }} <br />
+  <div class="container">
+    <div class="diasemana" *ngFor="let diasem of DiasSemana">
+      {{diasem}}
+    </div>
+    <div class="item" *ngFor="let dia of meses[i]">
+      <div>
+        <div *ngFor="let fiestaR of FiestaRegional[i]">
+          <div *ngIf="dia == fiestaR" [ngClass]="'fiestaRegional'">
+            {{ dia }}
+          </div>
+        </div>
+        <div *ngFor="let fiestaL of FiestaLocal[i]">
+          <div *ngIf="dia == fiestaL" [ngClass]="'fiestaLocal'">
+            {{ dia }}
+          </div>
+        </div>
+        <div *ngFor="let fiestaN of FiestaNacional[i]">
+          <div *ngIf="dia == fiestaN" [ngClass]="'fiestaNacional'">
+            {{ dia }}
+          </div>
+        </div>
+        <div *ngFor="let fiestaC of FiestaCentro[i]">
+          <div *ngIf="dia == fiestaC" [ngClass]="'fiestaCentro'">
+            {{ dia }}
+          </div>
+        </div>
+        <div *ngFor="let dial of mesesLibres[i]">
+          <div *ngIf="dia == dial" [ngClass]="'no'">
+            {{ dia }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,43 @@
+p {
+    display: inline-grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.container {
+display: inline-grid;
+grid-template-columns: 40px 40px 40px 40px 40px 40px 40px;
+border: solid black;
+box-shadow: 3px 3px 3px black;
+margin: 15px;
+padding: 5px;
+text-align: center;
+}
+.item {
+    padding: 5px;
+    text-align: center;
+}
+.fiestaRegional {
+    color: rgb(52, 64, 235);
+    border: solid rgb(52, 64, 235);
+}
+.fiestaLocal {
+    color: rgb(211, 70, 176);
+    border: solid rgb(211, 70, 176);
+}
+.fiestaNacional {
+    color: rgb(38, 193, 38);
+    border: solid rgb(38, 193, 38);
+}
+.fiestaCentro {
+    color: rgb(255, 191, 0);
+    border: solid rgb(255, 191, 0)
+}
+
+.diasemana {
+    font-family: 'Courier New', Courier, monospace ;
+    font-size: 20px;
+    border: solid black 1px;
+}
+
+.no {
+    color: black    ;
+}
